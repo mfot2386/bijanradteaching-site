@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BijanRadTeaching Archive</title>
+  <meta name="description" content="Information about the personal WhatsApp export archive workflow.">
+  <style>
+    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;max-width:820px;margin:48px auto;padding:0 22px;color:#202124}
+    h1{line-height:1.2} a{color:#1558a6} .note{background:#f3f5f7;padding:16px 18px;border-radius:8px}
+    footer{margin-top:40px;border-top:1px solid #ddd;padding-top:16px;color:#555}
+  </style>
+</head>
+<body>
+  <h1>BijanRadTeaching Archive</h1>
+  <p>This is a personal-use workflow for maintaining a searchable archive of a WhatsApp group chat and its exported attachments.</p>
+  <h2>How it works</h2>
+  <ol>
+    <li>The account owner manually exports the group chat using WhatsApp's built-in <em>Export Chat</em> feature.</li>
+    <li>The owner places the exported ZIP file in the designated <strong>Incoming</strong> folder in their own Google Drive.</li>
+    <li>A scheduled GitHub Actions workflow accesses the designated Drive folders with the owner's authorization, processes new exports, and updates the archive and media files in the owner's Google Drive.</li>
+  </ol>
+  <p>The workflow does not connect directly to WhatsApp, read WhatsApp messages automatically, or use an official WhatsApp API to export chats. A new export must be made manually by the account owner.</p>
+  <h2>Data and security</h2>
+  <p>The archive is stored in the owner's Google Drive. During an update, the export and relevant archive files are processed by a temporary GitHub-hosted Actions runner. The workflow is designed not to commit chat content, attachments, or OAuth credentials to this website or the updater's source-code repository.</p>
+  <div class="note"><strong>Important:</strong> This is a personal archival utility, not a HIPAA-compliant service. Do not use it to process identifiable patient information or other data unless you have independently confirmed that doing so is permitted and appropriately protected.</div>
+  <p>For details about data handling, see the <a href="privacy.html">Privacy Policy</a>.</p>
+  <footer>Contact: <a href="mailto:mfot2386@gmail.com">mfot2386@gmail.com</a></footer>
+</body>
+</html>
